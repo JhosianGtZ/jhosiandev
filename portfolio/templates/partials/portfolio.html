@@ -1,0 +1,60 @@
+ 
+{% load static %}
+
+<section class="portfolio">
+
+    <div class="container" id="portfolio">
+        <div class="portfolio-text">
+            <h2 class="title">Portfolio.</h2>
+            <p>Check out my portfolio to see some of my recent work.</p>
+        </div>
+
+        <div class="portfolio-grid">
+
+        {% for project in projects %}
+            <div class="portfolio-card">
+                <img src="{{project.imageurl}}">
+
+                <div class="portfolio-card-text">
+                    <h3>{{project.title}}</h3>
+                    <p class="portfolio-card-title">{{project.subtitle}}</p>
+                    <div class="card-icons">
+                        <i class='bx {{project.icon1}}'></i>
+                        <i class='bx {{project.icon2}}'></i>
+                        <i class='bx {{project.icon3}}'></i>
+                    </div>
+                </div>
+                <a href="{{project.url}}">View more</a>
+            </div>
+            {% endfor %}
+
+
+            <!-- <div class="portfolio-card">
+                <img src="{% static 'portfolio/images/screenshot-d.png' %}">
+
+                <div class="portfolio-card-text">
+                    <h3>App Name</h3>
+                    <p class="portfolio-card-title">WEBSITE</p>
+                    <div class="card-icons">
+                        <i class='bx bxl-nodejs'></i>
+                        <i class='bx bxl-javascript'></i>
+                        <i class='bx bxl-bootstrap'></i>
+                    </div>
+                </div>
+                <a href="#">View more</a>
+            </div> -->
+
+
+
+        </div>
+
+        <div class="portfolio-text">
+            <a href="https://github.com/JhosianGtZ/" target="_blank">
+                <p> <i class="bx bxl-github"></i> View more projects.</p>
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum numquam repellat quam minima veritatis id sed reiciendis dolor iste labore, impedit, odio ab eum. Sapiente tempore suscipit fugiat non quae. -->
