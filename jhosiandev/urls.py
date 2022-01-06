@@ -12,4 +12,4 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('admin/', admin.site.urls),
     path("portfolio/", include('portfolio.urls')),
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
